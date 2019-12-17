@@ -1,0 +1,58 @@
+.blockies-container {
+    width: 80%;
+    min-height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 4em;
+}
+
+.display-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blockie {
+    background-color: rgb(228, 222, 222);
+    border-radius: 15%;
+    padding: 2.8em;
+    color: black;
+    margin: 2em;
+    border: gray 3px solid;
+}
+
+.blockie-img {
+    height: 5em;
+    width: auto;
+    border-radius: 20%;
+    margin-bottom: 1em;
+    border: gray 3px solid;
+}
+
+.user-info-container {
+    /* background-color: rgb(94, 91, 91); */
+    background-color: rgb(228, 222, 222);
+    color: black;
+    padding: 1.3em;
+    height: 6vh;
+    border: gray 3px solid;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-right: 25em;
+    margin-bottom: 3em;
+    margin-top: 1em;
+}
+
+.my-blockies-text {
+    font-size: 1.5em;
+}
+
+/* .blockie-img:hover {
+    height: 7em;
+    width: auto;
+    transition: 200ms;
+} */
