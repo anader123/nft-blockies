@@ -5,7 +5,7 @@ import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 import "openzeppelin-solidity/contracts/token/ERC721/ERC721.sol";
 import "openzeppelin-solidity/contracts/token/ERC721/ERC721Enumerable.sol";
 
-contract ERC721PayPerMint 
+contract ERC721PayPerMint
     is ERC721, ERC721Enumerable, Ownable {
     using SafeMath for uint256;
 

@@ -56,3 +56,19 @@
     width: auto;
     transition: 200ms;
 } */
+
+.mint-transfer-toggle {
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+    margin-bottom: 1em;
+    font-size: 1.4em;
+}
+
+.mint-transfer-toggle:hover {
+    cursor: pointer;
+}
+
+input {
+    width: 15vw;
+}

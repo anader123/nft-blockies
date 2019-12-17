@@ -55,6 +55,23 @@ export default class Display extends Component {
         return !exists;
     }
 
+    sendNFT = (recipientAddress, tokenId) => {
+        const { contract, userAccount } = this.props;
+        const { tokens } = this.state;
+        const strTokenId = tokenId.toString();
+        console.log(userAccount, recipientAddress, strTokenId)
+        if(tokenId > 0 && recipientAddress.length === 42) {
+            contract.methods.safeTransferFrom(userAccount, recipientAddress, strTokenId).send( {from: userAccount} )
+            .on('receipt', (receipt) => {
+                const newTokens = tokens.filter(token => token.id !== tokenId);
+                this.setState({ tokens: newTokens });
+            })
+            .on('error', (error) => {
+                console.log(error);
+            })
+        }
+    }
+
     getTokens = async () => {
         const { userAccount, contract } = this.props;
         const strBalance = await contract.methods.balanceOf(userAccount).call();
@@ -71,7 +88,7 @@ export default class Display extends Component {
     }
 
     render() {
-        const { userAccount, ethBalance } = this.props;
+        const { userAccount, ethBalance, contract } = this.props;
         const { tokens, loading, mint } = this.state;
         if(loading) return <div>Loading...</div>;
         return (
@@ -92,14 +109,14 @@ export default class Display extends Component {
                         </div>
                     ))}
                 </div>
-                <div>
+                <div className='mint-transfer-toggle'>
                     <h2 onClick={() => this.mintToggle(true)}>Mint</h2>
                     <h2 onClick={() => this.mintToggle(false)}>Transfer</h2>
                 </div>
                 {mint ? 
                 <Mint canMint={this.canMint} mint={this.mint}/>
                 :
-                <Transfer />
+                <Transfer userAccount={userAccount} contract={contract} sendNFT={this.sendNFT}/>
                 }
             </div>
         )

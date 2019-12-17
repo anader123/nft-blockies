@@ -29,3 +29,17 @@ html {
   border-radius: 4px;
   border: solid rgb(204, 199, 199) 2px;
 }
+
+.connect-text {
+  width: 60%;
+  text-align: center;
+  margin-bottom: 4em;
+  margin-top: 2em;
+}
+
+.connect-wallet-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
