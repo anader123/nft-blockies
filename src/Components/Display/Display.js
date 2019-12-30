@@ -110,8 +110,8 @@ export default class Display extends Component {
                     ))}
                 </div>
                 <div className='mint-transfer-toggle'>
-                    <h2 onClick={() => this.mintToggle(true)}>Mint</h2>
-                    <h2 onClick={() => this.mintToggle(false)}>Transfer</h2>
+                    <h2 className={mint ? 'underline' : ''} onClick={() => this.mintToggle(true)}>Mint</h2>
+                    <h2 className={mint ? '' : 'underline'} onClick={() => this.mintToggle(false)}>Transfer</h2>
                 </div>
                 {mint ? 
                 <Mint canMint={this.canMint} mint={this.mint}/>

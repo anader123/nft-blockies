@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Rajdhani&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Rajdhani&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Kulim+Park&display=swap');
 
 .App {
   text-align: center;
-  font-family: 'Rajdhani', sans-serif;
+  /* font-family: 'Rajdhani', sans-serif; */
+  font-family: 'Kulim Park', sans-serif;
   font-weight: bold;
   display: flex;
   flex-direction: column;
@@ -10,7 +12,7 @@
 }
 
 .app-header {
-  width: 13%;
+  width: 15%;
   margin: .8em;
   font-size: 3em;
   border-bottom: solid white 3px
@@ -19,6 +21,15 @@
 html {
   color: white;
   background-color: rgb(34, 30, 30);
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #c6ced8;
+  color: white;
+  font-size: 0.95em;
 }
 
 .blockie-btn {

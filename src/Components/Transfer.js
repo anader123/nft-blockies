@@ -35,11 +35,13 @@ export default class Transfer extends Component {
                         name='recipientAddress' 
                         value={recipientAddress} 
                         onChange={this.handleChange}
+                        placeholder='Recipient Address'
                     />
-                    <input type='numeric' 
+                    <input type='number' 
                         name='tokenId' 
                         value={tokenId} 
                         onChange={this.handleChange}
+                        placeholder='Token ID'
                     />
                     <button className='blockie-btn'>Send Blockie</button>
                 </form>

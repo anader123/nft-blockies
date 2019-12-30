@@ -38,7 +38,11 @@ export default class Mint extends Component {
             <div>
                 {!numberTaken ? <div/> : <div className='number-taken-warning'>That number is already taken</div>}
                 <form className='mint-input-container' onSubmit={this.handleMint}>
-                    <input type="numeric" value={value} onChange={this.handleChange}/>
+                    <input type="number" 
+                        value={value} 
+                        onChange={this.handleChange}
+                        placeholder='Enter token number to mint'
+                    />
                     <button className='blockie-btn' disabled={!mintable}>Create Blockie</button>
                 </form>
             </div>
