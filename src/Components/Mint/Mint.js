@@ -27,8 +27,9 @@ export default class Mint extends Component {
     }
 
     handleMint = async (event) => {
+        const { mint } = this.props;
         event.preventDefault();
-        this.props.mint(this.state.value);
+        mint(this.state.value);
         this.setState({ value: '', mintable: false });
     }
 
